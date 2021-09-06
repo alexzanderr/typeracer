@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/alexzander/Alexzander__/programming/projects/typeracer/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+Game	typeracer.py	/^class Game:$/;"	c
+__init__	typeracer.py	/^    def __init__(self) -> None:$/;"	m	class:Game	typeref:typename:None
+argument_parser	typeracer.py	/^    argument_parser = argparse.ArgumentParser(description="typeracer.py usage")$/;"	v
+calculate_live_wpm	typeracer.py	/^    def calculate_live_wpm(self, total_correct_chars: int, time_taken: float):$/;"	m	class:Game
+colors	typeracer.py	/^colors = {$/;"	v
+multiline_code_to_match	typeracer.py	/^multiline_code_to_match = [ $/;"	v
+play_typeracer	typeracer.py	/^    def play_typeracer(self, screen: "curses._CursesWindow", lines_array: list) -> None:$/;"	m	class:Game	typeref:typename:None
+print_colored_line_on_screen	typeracer.py	/^    def print_colored_line_on_screen(self, y: int, x: int, line: str, curr: int, corr: int, wrg:/;"	m	class:Game	typeref:typename:None
+print_completed_line_on_screen	typeracer.py	/^    def print_completed_line_on_screen(self, y, x, line):$/;"	m	class:Game
+print_multi_lines_on_screen	typeracer.py	/^    def print_multi_lines_on_screen(self, start_index: int, x: int,  multiline_array: list, from/;"	m	class:Game	typeref:typename:None
+print_stats	typeracer.py	/^    def print_stats(self, y, string, current_index, correct_index, wrong_index):$/;"	m	class:Game
+print_text_on_screen	typeracer.py	/^    def print_text_on_screen(self, y, x, text, color=None) -> None:$/;"	m	class:Game	typeref:typename:None
+program_arguments	typeracer.py	/^    program_arguments = argument_parser.parse_args()$/;"	v
+test_app	drawing.py	/^def test_app(screen: "curses._CursesWindow"):$/;"	f
+wrap_multicode_lines	typeracer.py	/^def wrap_multicode_lines(multiline_code, width):$/;"	f

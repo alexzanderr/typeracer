@@ -4,8 +4,39 @@ import curses
 from curses import textpad
 import textwrap
 
+class NCursesScreen:
+    def __init__(self, screen: "curses._CursesWindow") -> None:
+        self.__screen = screen
 
-def test_app(screen: "curses._CursesWindow"):
+    def draw_rectangle(self, y1, x1, y2, x2):
+        """
+            this is a rectangle with specified coordinates:
+
+            (y1, x1)            (y1, x1)
+            |------------------|
+            |                  |
+            |                  |
+            |                  |
+            |------------------|
+            (y2, x1)            (y2, x2)
+        """
+        textpad.rectangle(self.__screen, y1, x1, y2, x2)
+
+
+    def func(self):
+        self.text = "text"
+
+    def print_text(self, y, x, item, color=None) -> None:
+        if type(item) != str:
+            item = str(item)
+        if color:
+            self.__screen.addstr(y, x, item, color)
+        else:
+            self.__screen.addstr(y, x, item)
+
+
+
+def test_app(screen: "curses._CursesWindow") -> None:
 
     screen_height, screen_width = screen.getmaxyx()
     while 1:
@@ -16,9 +47,13 @@ def test_app(screen: "curses._CursesWindow"):
         screen.getch()
 
 
+
+
+variable_renamed = 123
+
+
 if __name__ == "__main__":
     try:
         curses.wrapper(test_app)
     except KeyboardInterrupt:
         print("done")
-
