@@ -2,15 +2,30 @@
 
 import argparse
 
+
+
+
 def ParseProgramArguments():
+    """just parses the arguments from command-line interface
+
+    Returns:
+        argparse.ArgumentParser: returns an object of this
+        type with all the args parsed from command-line
+    """
+
     argument_parser = argparse.ArgumentParser(description="typeracer.py usage")
+    #
+    argument_parser.add_argument(
+        "--code-from-txt",
+        type=str,
+        help="load custom code/multiline text from text file (warning: format must be valid)",
+        default=None)
 
-    argument_parser.add_argument("--code-from-txt", type=str,
-                    help="load custom code/multiline text from text file (warning: format must be valid)",
-                    default=None)
-
-    argument_parser.add_argument("--code-from-json", type=str,
-                    help="load custom code/multiline text from JSON file (warning: format must be valid)", default=None)
+    argument_parser.add_argument(
+        "--code-from-json",
+        type=str,
+        help="load custom code/multiline text from JSON file (warning: format must be valid)",
+        default=None)
 
     argument_parser.add_argument(
         "--minimalist",
@@ -39,5 +54,5 @@ def ParseProgramArguments():
         help="gruvbox is the best",
         default="gruvbox"
     )
-    return argument_parser.parse_args()
 
+    return argument_parser.parse_args()

@@ -41,7 +41,7 @@ def NCursesApplication():
         screen = NCursesScreen(ncurses_screen)
         screen.print_text(0, 0, "jkstasd")
         screen.await_input()
-        
+
     except Exception as error:
         # Set everything back to normal
         ncurses_screen.keypad(False)

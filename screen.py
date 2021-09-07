@@ -55,7 +55,7 @@ class NCursesScreen:
         textpad.rectangle(self.__screen, y1, x1, y2, x2)
 
 
-    def print_text(self, y: int, x: int, item: str, color=None) -> None:
+    def print_text(self, y: int, x: int, item, color=None) -> None:
         """
             just prints text on ncurses screen at (y, x)
         """
@@ -92,6 +92,7 @@ class NCursesScreen:
 
     def move_cursor(self, y: int, x: int):
         self.__screen.move(y, x)
+
 
 
     def get_char(self):
